@@ -1,0 +1,28 @@
+
+thead tr th{
+    text-align: center;
+}
+
+tbody tr, th, td{
+    text-align: center;
+}
+ul.messages{
+    padding: 0;
+}
+
+ul.messages li{
+    list-style: none;
+}
+
+h1 ,img {
+    color: black;
+}
+
+img {
+    height: 100px;
+    width: 100px;
+    border-radius: 20px;
+    border:1px solid lightslategray;
+}
+
+

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+{% block title %}  Adicione um Usuário {% endblock %}
+
+{% block content %}
+<body class="fundo">
+    <div class="container conteudo">
+    <h1 class="mt-5 mb-3 pt-4"> Adicione seu novo Usuário</h1>
+    <form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form|bootstrap }}
+    <input type="submit" class="btn btn-dark mb-5 mt-3" value="Criar Usuário">
+    <a href="../" class="btn btn-dark mb-5 mt-3"> Voltar </a>
+    </form>
+    </div>
+</body>
+{% endblock %}
