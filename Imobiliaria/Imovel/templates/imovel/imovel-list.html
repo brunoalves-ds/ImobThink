@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Imóveis{% endblock %}
+
+{% block content %}
+<div class="offset-1 col-10 list-div">
+    <h1>Imóveis Cadastrados</h1>
+    <a id="add-link" href="cadastrarImovel/">
+        <div class="col-2 add-div">
+            <i class="fas fa-plus"></i> Cadastrar Imóvel
+        </div>
+    </a>
+    <div class="col-9 search-div">
+        <input class="form-control" type="text" id="search" name="search"
+            placeholder="Digite o nome do Imóvel para a busca...">
+        <i class="fas fa-search"></i>
+    </div>
+    <ul class="task-list">
+        {% for imovel in imoveis %}
+        <li class="task-item">
+            <span><a href="imovel/{{imovel.id}}">{{ imovel.endereco }}</a></span>
+            <span><i class="fas fa-trash"></i></span>
+            <span><i class="fas fa-edit"></i></span>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
