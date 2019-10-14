@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Imóveis{% endblock %}
+
+{% block content %}
+<div class="offset-1 col-10 list-div">
+    <h1>{{ imoveis.endereco }}</h1>
+    <p>{{ imoveis.status }}</p>
+    <p>{{ imoveis.preco }}</p>
+    <p>{{ imoveis.cep }}</p>
+    <p>{{ imoveis.tamanho }}</p>
+    <p>{{ imoveis.quartos }}</p>
+    <p>{{ imoveis.andares }}</p>
+    <p>{{ imoveis.created_at }}</p>
+    <p>{{ imoveis.update_at }}</p>
+</div>
+{% endblock %}
