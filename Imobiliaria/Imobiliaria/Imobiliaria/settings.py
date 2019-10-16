@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'bootstrapform',
     'Usuario',
     'Cliente',
+    'Imovel',
 
 
 ]

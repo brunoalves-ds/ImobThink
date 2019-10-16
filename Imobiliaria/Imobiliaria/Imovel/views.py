@@ -17,7 +17,7 @@ def cadastrarImovel(request):
 
         if form.is_valid():
             imovel = form.save()
-            return redirect('/')
+            return redirect('/Imovel')
 
     else:
         form =  imovelForm()
