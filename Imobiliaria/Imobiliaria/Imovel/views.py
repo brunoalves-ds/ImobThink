@@ -22,3 +22,18 @@ def cadastrarImovel(request):
     else:
         form =  imovelForm()
         return render(request, 'imovel/cadastrarImovel.html', {'form': form})
+
+def editarImovel(request, id):
+    imoveis = get_object_or_404(imovel, pk=id)    
+    form =  imovelForm(instance=imoveis)
+
+    if(request.method == 'POST'):
+        form =  imovelForm(request.POST, instance=imoveis)
+
+        if(form.is_valid()):
+            imoveis = form.save()
+            return redirect('/Imovel')
+        else:
+            return render(request, 'imovel/editarImovel.html', {'form': form}, {'imoveis': imoveis})
+    else:
+        return render(request, 'imovel/editarImovel.html', {'form': form}, {'imoveis': imoveis})
