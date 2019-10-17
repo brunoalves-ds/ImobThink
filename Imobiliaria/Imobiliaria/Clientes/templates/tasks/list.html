@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block title %}Lista de cliente{% endblock %}
+
+{% block content %}
+<div class="offset-1 col-10 list-div">
+    <h1>Lista de cliente</h1>
+    <a id="add-link" href="newtask/">
+        <div class="col-2 add-div">
+            <i class="fas fa-plus"></i> Adicionar cliente
+        </div>
+    </a>
+    <div class="col-9 search-div">
+        <form method="GET" id="search-form">
+            <input class="form-control" type="text" id="search" name="search" placeholder="Digite o nome do cliente para buscar..." value="{{ request.GET.search }}">
+            <i class="fas fa-search" id="search-btn"></i>
+        </form>
+    </div>
+    <div class="col-12 filter-div">
+        <span>Filtrar por:</span>
+        <select name="filter" id="filter" class="form-control">
+            <option value="">Escolha uma opção...</option>
+            <option value="ativo">Clientes ativos</option>
+            <option value="inativo">Clientes inativos</option>
+        </select>
+    </div>
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li {% if message.tags %} class="alert alert-{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    <table class="table">
+        <thead class="thead-dark">
+        <tr>
+            <th> Identificador </th>
+            <th>Nome</th>
+            <th> CPF</th>
+            <th colspan="2">Ações</th>
+        </tr>
+        </thead>
+        {% for task in tasks %}
+        <tbody>
+        <tr>
+             <td>{{task.id}}</td>
+            <td>{{task.nome}}</td>
+            <td>{{task.CPF}}</td>
+            <td><a href="delete/{{task.id}}" class="delete-btn"><span><i class="fas fa-trash"></i></span></a></td>
+            <td><a href="edit/{{task.id}}"><span><i class="fas fa-edit"> </i> </a> </td>
+        </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+    <!--
+    <ul class="task-list">
+        {% for task in tasks %}
+        {% if task.status == 'ativo' %}
+            <li class="task-item">
+        {% else %}
+            <li class="task-item done">
+        {% endif %}
+
+               <span><a href="/task/{{task.id}}">{{task.nome}}</a></span>
+                <a href="delete/{{task.id}}" class="delete-btn"><span><i class="fas fa-trash"></i></span></a>
+                <a href="edit/{{task.id}}"><span><i class="fas fa-edit"></i></span></a>
+            </li>
+        {% endfor %}
+    </ul>
+    -->
+</div>
+{% endblock %}

@@ -1,0 +1,25 @@
+              {% extends 'base.html' %}
+
+{% block title %}Visualizar dados dos Clientes{% endblock %}
+
+{% block content %}
+<div class="offset-1 col-10 list-div">
+    <tr>Nome: {{ task.nome }} </tr><p></p>
+    <tr>Gênero: {{ task.genero }} </tr><p></p>
+    <tr>Endereço: {{ task.endereco }}</tr><p></p>
+    <tr>Número: {{ task.numero }}</tr><p></p>
+    <tr>Bairro: {{ task.bairro }}</tr><p></p>
+    <tr>Cidade: {{ task.cidade }}</tr><p></p>
+    <tr>UF: {{ task.UF }}</tr><p></p>
+    <tr>CEP: {{ task.CEP }}</tr><p></p>
+    <tr>E-mail: {{ task.email }}</tr><p></p>
+    <tr>CPF: {{ task.CPF }}</tr><p></p>
+    <tr>RG: {{ task.RG }}</tr><p></p>
+    <tr>Data de Nascimento: {{ task.nascimento }}</tr><p></p>
+    <tr>Telefone: {{ task.telefone }}</tr><p></p>
+    <tr>Celular: {{ task.celular }}</tr><p></p>
+    <tr>Status: {{ task.status }}</tr><p></p>
+    <tr>Informações Adicionais: {{ task.informacoes_adicionais }}</tr><p></p>
+
+</div>
+{% endblock %}
