@@ -14,15 +14,35 @@
         <input class="form-control" type="text" id="search" name="search"
             placeholder="Digite o nome do Imóvel para a busca...">
         <i class="fas fa-search"></i>
+        <div>
+            <ul class="messages">
+                {% for message in messages %}
+                <li{% if message.tags %} class="alert alert-{{ message.tags }}" {% endif %}>{{ message }}</li>
+                    {% endfor %}
+            </ul>
+        </div>
     </div>
     <ul class="task-list">
         {% for imovel in imoveis %}
         <li class="task-item">
             <span><a href="imovel/{{imovel.id}}">{{ imovel.endereco }}</a></span>
-            <span><i class="fas fa-trash"></i></span>
-            <span><i class="fas fa-edit"></i></span>
+            <a href="deletarImovel/{{imovel.id}}" class="delete-btn"><span><i class="fas fa-trash"></i></span></a>
+            <a href="editarImovel/{{imovel.id}}"><span><i class="fas fa-edit"></i></span></a>
         </li>
         {% endfor %}
     </ul>
+    <diV class="pagination">
+        <span class="step-links">
+            {% if imoveis.has_previous %}
+                <a href="?page={{ imoveis.previous_page_number }}"><i class="fas fa-arrow-left"></i></a>
+            {% endif %}            
+            <span class="current">
+                {{ imoveis.number }} de  {{ imoveis.paginator.num_pages }}
+            </span>            
+            {% if imoveis.has_next %}       
+                <a href="?page={{ imoveis.next_page_number }}"><i class="fas fa-arrow-right"></i></a>
+            {% endif %} 
+        </span>
+    </div>
 </div>
 {% endblock %}

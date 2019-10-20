@@ -39,8 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'bootstrapform',
     'Usuario',
-    'Cliente',
+    #'Clientes',
     'Imovel',
+    #'accounts',
 
 
 ]

@@ -96,13 +96,40 @@
 /* Rodapé */
 footer {
     background-color: #333;
-    height: 200px;
     border-top: 2px solid #202020;
 }
 
-footer p {
+footer li, h3 {
+    list-style: none;
     color: #f5f5f5;
     text-align: center;
-    top: 50%;
+    top: 10%;
     position: relative;
+}
+
+/* Messages */
+
+ul.messages {
+    padding 0;
+}
+
+ul.messages li {
+    list-style: none;
+}
+
+/* Paginação */
+
+.pagination {
+    margin-bottom: 20px;
+}
+
+.step-links {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.step-links .current {
+    margin-left: 5px;
+    margin-right: 5px;
 }

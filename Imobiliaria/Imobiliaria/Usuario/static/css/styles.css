@@ -32,7 +32,7 @@ img {
 /* Navbar */
 
 .navbar  {
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid #26A69A;
     margin-bottom: 20px;
 }
 
@@ -45,7 +45,7 @@ img {
 }
 
 .navbar-light .navbar-nav a.nav-link {
-    color: #333;
+    color: #26A69A;
     letter-spacing: 1px;
 }
 
@@ -56,7 +56,7 @@ img {
 }
 
 .add-div {
-    background-color: #3476e2;
+    background-color: #42A5F5;
     cursor: pointer;
     display: inline-block;
     color: #FFF;
@@ -122,15 +122,15 @@ img {
 
 /* Rodapé */
 footer {
-    background-color: #333;
-    height: 200px;
-    border-top: 2px solid #202020;
+    background-color: #29B6F6;
+    border-top: 2px solid #26C6DA;
 }
 
-footer p {
+footer li, h3  {
+    list-style: none;
     color: #f5f5f5;
     text-align: center;
-    top: 50%;
+    top: 10%;
     position: relative;
 }
 
