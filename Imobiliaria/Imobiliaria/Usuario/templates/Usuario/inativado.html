@@ -1,9 +1,8 @@
 {% extends 'base.html' %}
-{% block title %} Listar Usuário {% endblock %}
-
+{% block title  %} Inativado {% endblock %}
 
 {% block content %}
-<h1 class="mb-5">Bem vindo</h1>
+    <h1 class="mb-5">Bem vindo</h1>
     <table class="table">
         <thead class="thead-dark">
             <tr>
@@ -27,7 +26,7 @@
         {% for dados in dados %}
             <tr>
             <th scope="row">
-                <img src="../media/{{ dados.foto }}" alt="Não possui foto">
+                <img src="/media/{{ dados.foto }}" alt="Não possui foto">
             </th>
             <th scope="row">{{dados.Tipo_Usuario}} </th>
             <td>{{dados.Tipo_Status_Usuario}}</td>
@@ -53,10 +52,9 @@
             <button class="btn btn-dark mt-3">
                 Adicione seu novo Usuário
             </button>
-        </a>
-                <a href="inativado/">
+        </a>        <a href="/Usuario/">
             <button class="btn btn-dark mt-3">
-                Usuários Inativados
+                Ativados
             </button>
         </a>
 {% endblock %}

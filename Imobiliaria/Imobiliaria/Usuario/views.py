@@ -5,7 +5,7 @@ from django.contrib import messages
 
 # Create your views here.
 def listarusuario(request):
-    dados = Usuario.objects.all().order_by('-created_at')
+    dados = Usuario.objects.filter(Tipo_Status_Usuario='Ativado').order_by('-created_at')
     return render(request, 'Usuario/listarUsuario.html', {'dados': dados})
 
 
@@ -42,3 +42,8 @@ def excluirusuario(request, id):
     excluir.delete()
     messages.info(request, 'Usuário Deletado com Sucesso.')
     return redirect('../../Usuario')
+
+
+def inativado(request):
+    dados = Usuario.objects.filter(Tipo_Status_Usuario='Inativado').order_by('-created_at')
+    return render(request, 'Usuario/inativado.html', {'dados':dados})
