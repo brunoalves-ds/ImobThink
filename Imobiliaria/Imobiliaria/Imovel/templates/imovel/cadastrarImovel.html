@@ -5,7 +5,7 @@
 {% block content %}
 <div class="offset-1 col-10 list-div">
     <h1>Cadastrar Imóvel</h1>
-    <form method="POST">
+    <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form|bootstrap }}
         <input type="submit" class="btn btn-success" value="Cadastrar Imóvel">

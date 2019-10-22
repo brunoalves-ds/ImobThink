@@ -50,6 +50,7 @@
     position: absolute;
     top: 12px;
     right: 26px;
+    cursor: pointer;
 }
 
 .search-div {
@@ -60,6 +61,7 @@
 }
 
 /* Imoveis */
+
 
 .list-div {
     padding: 0;
@@ -128,6 +130,7 @@ ul.messages li {
     margin-left: auto;
     margin-right: auto;
 }
+
 
 .step-links .current {
     margin-left: 5px;

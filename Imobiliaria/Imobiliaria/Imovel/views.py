@@ -6,13 +6,22 @@ from django.contrib import messages
 
 # Create your views here.
 def imovelList(request):
-    imovel_list = imovel.objects.all().order_by('-created_at')
 
-    paginator = Paginator(imovel_list, 3)
+    search = request.GET.get('search')
 
-    page = request.GET.get('page')
+    if search:
+        
+        imoveis = imovel.objects.filter(endereco__icontains=search)
 
-    imoveis = paginator.get_page(page)
+    else:
+
+        imovel_list = imovel.objects.all().order_by('-created_at')
+
+        paginator = Paginator(imovel_list, 3)
+
+        page = request.GET.get('page')
+
+        imoveis = paginator.get_page(page)
 
     return render(request, 'imovel/imovel-list.html',{'imoveis': imoveis})
 
@@ -22,7 +31,7 @@ def imovelView(request, id):
 
 def cadastrarImovel(request):
     if request.method == 'POST':
-        form =  imovelForm(request.POST)
+        form =  imovelForm(request.POST, request.FILES)
 
         if form.is_valid():
             imovel = form.save()

@@ -15,7 +15,7 @@ def novousuario(request):
 
         if form.is_valid():
             newuser = form.save()
-            return redirect('../../Usuario')
+            return redirect('/Usuario')
 
     else:
         form = NovoUsuarioForm()

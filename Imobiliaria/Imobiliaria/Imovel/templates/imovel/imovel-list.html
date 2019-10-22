@@ -11,9 +11,11 @@
         </div>
     </a>
     <div class="col-9 search-div">
-        <input class="form-control" type="text" id="search" name="search"
-            placeholder="Digite o nome do Imóvel para a busca...">
-        <i class="fas fa-search"></i>
+        <form method="GET" id="search-formf">
+            <input class="form-control" type="text" id="search" name="search"
+                placeholder="Digite o nome do Imóvel para a busca..." value="{{ request.GET.search }}">
+            <i class="fas fa-search" id="seach-btn"></i>
+        </form>
         <div>
             <ul class="messages">
                 {% for message in messages %}
@@ -22,27 +24,58 @@
             </ul>
         </div>
     </div>
-    <ul class="task-list">
+    <table id="imovel-list" class="table table-hover">
         {% for imovel in imoveis %}
-        <li class="task-item">
-            <span><a href="imovel/{{imovel.id}}">{{ imovel.endereco }}</a></span>
-            <a href="deletarImovel/{{imovel.id}}" class="delete-btn"><span><i class="fas fa-trash"></i></span></a>
-            <a href="editarImovel/{{imovel.id}}"><span><i class="fas fa-edit"></i></span></a>
-        </li>
-        {% endfor %}
-    </ul>
-    <diV class="pagination">
-        <span class="step-links">
-            {% if imoveis.has_previous %}
-                <a href="?page={{ imoveis.previous_page_number }}"><i class="fas fa-arrow-left"></i></a>
-            {% endif %}            
-            <span class="current">
-                {{ imoveis.number }} de  {{ imoveis.paginator.num_pages }}
-            </span>            
-            {% if imoveis.has_next %}       
-                <a href="?page={{ imoveis.next_page_number }}"><i class="fas fa-arrow-right"></i></a>
-            {% endif %} 
-        </span>
-    </div>
+        <thead>
+            <tr>
+                <th scope="col">Imagens</th>
+                <th scope="col">Endereço</th>
+                <th scope="col">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">
+                    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="../media/{{ imovel.foto1 }}" alt="Primeiro Slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="../media/{{ imovel.foto2 }}" alt="Segundo Slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="../media/{{ imovel.foto3 }}" alt="Terceiro Slide">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Anterior</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Próximo</span>
+                        </a>
+                    </div>
+                </th>
+                <td><span><a href="imovel/{{imovel.id}}">{{ imovel.endereco }}</a></span></td>
+                <td><a href="deletarImovel/{{imovel.id}}" class="delete-btn"><span><i
+                                class="fas fa-trash"></i></span></a>
+                    <a href="editarImovel/{{imovel.id}}"><span><i class="fas fa-edit"></i></spa</td> </tr> </tbody>
+                                {% endfor %} </table> <diV class="pagination">
+                            <span class="step-links">
+                                {% if imoveis.has_previous %}
+                                <a href="?page={{ imoveis.previous_page_number }}"><i class="fas fa-arrow-left"></i></a>
+                                {% endif %}
+                                {% if imoveis.paginator.num_pages %}
+                                <span class="current">
+                                    {{ imoveis.number }} de {{ imoveis.paginator.num_pages }}
+                                </span>
+                                {% endif %}
+                                {% if imoveis.has_next %}
+                                <a href="?page={{ imoveis.next_page_number }}"><i class="fas fa-arrow-right"></i></a>
+                                {% endif %}
+                            </span>
+</div>
 </div>
 {% endblock %}

@@ -76,7 +76,8 @@ img {
 .fas.fa-search {
     position: absolute;
     top: 12px;
-    right: 26px;
+    right: 26px;    
+    cursor: pointer;        
 }
 
 .search-div {
@@ -84,6 +85,7 @@ img {
     margin-top: 15px;
     margin-bottom: 15px;
     display: inline-block;
+
 }
 
 /* Imoveis */
