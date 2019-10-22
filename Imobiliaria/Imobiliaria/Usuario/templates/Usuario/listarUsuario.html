@@ -3,8 +3,9 @@
 
 
 {% block content %}
-<h1 class="mb-5">Bem vindo</h1>
-    <table class="table">
+    <div class="body container">
+    <h1 class="mb-5">Bem vindo</h1>
+    <table class="table" >
         <thead class="thead-dark">
             <tr>
             <th scope="col">Imagens</th>
@@ -48,8 +49,8 @@
         {% endfor %}
         </tbody>
     </table>
-
-        <a href="novousuario/{{ dados.id }}">
+    </div>
+        <a href="novousuario/{{ dados.id }}" class="ml-4">
             <button class="btn btn-dark mt-3">
                 Adicione seu novo Usuário
             </button>
@@ -59,4 +60,5 @@
                 Usuários Inativados
             </button>
         </a>
+
 {% endblock %}

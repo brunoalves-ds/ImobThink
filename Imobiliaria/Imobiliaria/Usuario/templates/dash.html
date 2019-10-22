@@ -36,7 +36,43 @@
             </div>
         </nav>
 
-        {% block content %}{% endblock %}
+    <div class="body container">
+    <h1 class="mb-5">Bem vindo</h1>
+    <table class="table" >
+        <thead class="thead-dark">
+            <tr>
+            <th scope="col">Imagens</th>
+            <th scope="col">Tipo Usuário</th>
+            <th scope="col">Status Usuário</th>
+            <th scope="col">Nome do Usuário</th>
+            <th scope="col">Login</th>
+            <th scope="col">Última Atualização</th>
+            <th colspan="2">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li {% if message.tags %}class="alert alert-success" {% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {%  endif %}
+        {% for dados in dados %}
+            <tr>
+            <th scope="row">
+                <img src="../media/{{ dados.foto }}" alt="Não possui foto">
+            </th>
+            <th scope="row">{{dados.Tipo_Usuario}} </th>
+            <td>{{dados.Tipo_Status_Usuario}}</td>
+            <td>{{dados.Nome_Usuario}}</td>
+            <td>{{dados.Login_Usuario}}</td>
+            <td>{{dados.updated_at}}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    </div>
 
         <footer class="mt-4">
             <h3 class="mb-5">Desenvolvido Por:</h3>

@@ -2,6 +2,7 @@
 {% block title  %} Inativado {% endblock %}
 
 {% block content %}
+    <div class="body container">
     <h1 class="mb-5">Bem vindo</h1>
     <table class="table">
         <thead class="thead-dark">
@@ -47,12 +48,8 @@
         {% endfor %}
         </tbody>
     </table>
-
-        <a href="novousuario/{{ dados.id }}">
-            <button class="btn btn-dark mt-3">
-                Adicione seu novo Usuário
-            </button>
-        </a>        <a href="/Usuario/">
+    </div>
+        <a href="/Usuario/" class="ml-4">
             <button class="btn btn-dark mt-3">
                 Ativados
             </button>

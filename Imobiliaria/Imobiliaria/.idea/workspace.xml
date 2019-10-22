@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="964d1568-9efc-46e7-a18d-c07ced2a95c9" name="Default Changelist" comment="" />
+    <list default="true" id="964d1568-9efc-46e7-a18d-c07ced2a95c9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Imobiliaria/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Usuario/templates/dash.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Imobiliaria/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Imobiliaria/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Imovel/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Imovel/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuario/static/css/listarUsuario.css" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/static/css/listarUsuario.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuario/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/static/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuario/templates/Usuario/inativado.html" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/templates/Usuario/inativado.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuario/templates/Usuario/listarUsuario.html" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/templates/Usuario/listarUsuario.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuario/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/templates/base.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,11 +38,14 @@
     </expand>
     <select />
   </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="CSS File" />
+        <option value="Python Script" />
         <option value="HTML File" />
       </list>
     </option>
@@ -50,6 +64,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\bruno\Desktop\ImobThink1\ImobThink\Imobiliaria\Imobiliaria\Usuario\templates" />
+      <recent name="C:\Users\bruno\Desktop\ImobThink1\ImobThink\Imobiliaria\Imobiliaria\Imobiliaria\templates\Principal" />
       <recent name="C:\Users\bruno\Desktop\Projeto\Imobiliaria\Imobiliaria\Usuario\templates\Usuario" />
     </key>
   </component>
@@ -113,7 +129,7 @@
       <workItem from="1570841364659" duration="175000" />
       <workItem from="1570974706837" duration="7160000" />
       <workItem from="1571746605197" duration="1090000" />
-      <workItem from="1571764879196" duration="598000" />
+      <workItem from="1571764879196" duration="6083000" />
     </task>
     <servers />
   </component>
