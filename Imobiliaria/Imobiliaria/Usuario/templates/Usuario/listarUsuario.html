@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'baseUsuario.html' %}
 {% block title %} Listar Usuário {% endblock %}
 
 
@@ -32,7 +32,9 @@
             </th>
             <th scope="row">{{dados.Tipo_Usuario}} </th>
             <td>{{dados.Tipo_Status_Usuario}}</td>
-            <td>{{dados.Nome_Usuario}}</td>
+
+                    <td > <a href="visualizar/{{ dados.id }}">{{dados.Nome_Usuario}} </a></td>
+
             <td>{{dados.Login_Usuario}}</td>
             <td>{{dados.updated_at}}</td>
             <td>
@@ -41,7 +43,7 @@
                   </a>
             </td>
             <td>
-                <a href="excluirusuario/{{ dados.id }}" alt="Excluir">
+                <a href="excluirusuario/{{ dados.id }}" alt="Excluir" class="delete-btn">
                 <i class="fas fa-user-times"></i>
                 </a>
             </td>
@@ -60,5 +62,17 @@
                 Usuários Inativados
             </button>
         </a>
-
+<div class="pagination">
+    <span class="step-links">
+        {% if dados.has_previous %}
+            <a href="?page={{ dados.previous_page_number }}"> <i class="fas fa-arrow-left"> </i> </a>
+         {% endif %}
+    <span class="current">
+        {{ dados.number }} de {{ dados.paginator.num_pages }}
+    </span>
+        {% if dados.has_next %}
+            <a href="?page={{ dados.next_page_number }}"> <i class="fas fa-arrow-right"> </i> </a>
+    {% endif %}
+    </span>
+</div>
 {% endblock %}

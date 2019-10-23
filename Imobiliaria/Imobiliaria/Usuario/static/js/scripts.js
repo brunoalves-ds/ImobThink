@@ -8,7 +8,7 @@ $( document ).ready(function() {
         e.preventDefault();
 
         var delLink = $(this).attr('href');
-        var result = confirm('Deseja realmente deletar esse Imovel?');
+        var result = confirm('Deseja realmente deletar ?');
 
         if(result) {
             window.location.href = delLink;

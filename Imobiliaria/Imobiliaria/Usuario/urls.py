@@ -9,4 +9,6 @@ urlpatterns = [
     path('editarusuario/<int:id>', views.editarusuario),
     path('excluirusuario/<int:id>', views.excluirusuario),
     path('inativado/', views.inativado),
+    path('visualizar/<int:id>', views.visualizar),
+    path('visualizarinativado/<int:id>', views.visualizarinativado),
 ]

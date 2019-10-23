@@ -2,16 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="964d1568-9efc-46e7-a18d-c07ced2a95c9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Imobiliaria/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Usuario/templates/dash.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Usuario/templates/Usuario/visualizar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Usuario/templates/Usuario/visualizarinativado.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Imobiliaria/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Imobiliaria/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Imovel/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Imovel/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Usuario/static/css/listarUsuario.css" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/static/css/listarUsuario.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Imobiliaria/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Imobiliaria/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Imovel/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/Imovel/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Usuario/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/static/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuario/static/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/static/js/scripts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuario/templates/Usuario/editarUsuario.html" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/templates/Usuario/editarUsuario.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Usuario/templates/Usuario/inativado.html" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/templates/Usuario/inativado.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Usuario/templates/Usuario/listarUsuario.html" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/templates/Usuario/listarUsuario.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Usuario/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuario/templates/Usuario/novoUsuario.html" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/templates/Usuario/novoUsuario.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuario/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/templates/baseUsuario.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuario/templates/dash.html" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/templates/dash.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuario/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuario/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,6 +71,7 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\bruno\Desktop\ImobThink1\ImobThink\Imobiliaria\Imobiliaria\Usuario\templates" />
+      <recent name="C:\Users\bruno\Desktop\ImobThink1\ImobThink\Imobiliaria\Imobiliaria\Usuario\templates\Usuario" />
       <recent name="C:\Users\bruno\Desktop\ImobThink1\ImobThink\Imobiliaria\Imobiliaria\Imobiliaria\templates\Principal" />
       <recent name="C:\Users\bruno\Desktop\Projeto\Imobiliaria\Imobiliaria\Usuario\templates\Usuario" />
     </key>
@@ -129,7 +136,8 @@
       <workItem from="1570841364659" duration="175000" />
       <workItem from="1570974706837" duration="7160000" />
       <workItem from="1571746605197" duration="1090000" />
-      <workItem from="1571764879196" duration="6083000" />
+      <workItem from="1571764879196" duration="10667000" />
+      <workItem from="1571829827135" duration="4365000" />
     </task>
     <servers />
   </component>

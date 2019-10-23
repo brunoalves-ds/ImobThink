@@ -2,10 +2,14 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .models import Usuario
 from .forms import NovoUsuarioForm
 from django.contrib import messages
+from django.core.paginator import Paginator
 
 # Create your views here.
 def listarusuario(request):
     dados = Usuario.objects.filter(Tipo_Status_Usuario='Ativado').order_by('-created_at')
+    paginator = Paginator(dados, 3)
+    page = request.GET.get('page')
+    dados = paginator.get_page(page)
     return render(request, 'Usuario/listarUsuario.html', {'dados': dados})
 
 
@@ -47,3 +51,12 @@ def excluirusuario(request, id):
 def inativado(request):
     dados = Usuario.objects.filter(Tipo_Status_Usuario='Inativado').order_by('-created_at')
     return render(request, 'Usuario/inativado.html', {'dados':dados})
+
+def visualizar(request, id):
+    dados = get_object_or_404(Usuario, pk=id)
+    return render(request, 'Usuario/visualizar.html', {'dados': dados})
+
+def visualizarinativado(request, id):
+    dados = get_object_or_404(Usuario, pk=id)
+    return render(request, 'Usuario/visualizarinativado.html', {'dados': dados})
+
