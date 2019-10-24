@@ -2,13 +2,23 @@
 {% block title %} Visualizar Usuário {% endblock %}
 
 {% block content %}
-        <table class="table">
-            <tr>
-                <td>{{ dados.Tipo_Usuario }}</td>
-                <td>{{ dados.Tipo_Status_Usuario }}</td>
-                <td>{{ dados.Nome_Usuario }}</td>
-                <td>{{ dados.Login_Usuario }}</td>
-                <td>{{ dados.Senha_Usuario }}</td>
-            </tr>
-        </table>
+    <table  class="visualizar borda"  >
+        <tr>
+            <td rowspan="4"><img class="visualizar_img" src="/media/{{ dados.foto }}" alt="Imagem Usuario"> </td>
+        </tr>
+         <tr>
+           <td colspan="3" class="nome"> <b>Nome:</b> {{ dados.Nome_Usuario }} </td>
+        </tr>
+        <tr>
+             <td>
+                 <b>Tipo:</b> <br> {{ dados.Tipo_Usuario }}
+             </td>
+            <td>
+                <b>Status:</b> <br>{{ dados.Tipo_Status_Usuario }}
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"> <b>Login:</b> {{ dados.Login_Usuario }}</td>
+        </tr>
+    </table>
 {% endblock %}

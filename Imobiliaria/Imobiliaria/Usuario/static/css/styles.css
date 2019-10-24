@@ -148,3 +148,28 @@ footer li, h3  {
     margin-left: 5px;
     margin-right: 5px;
 }
+
+.visualizar{
+    margin: 100px 250px;
+    width: 700px;
+}
+.visualizar_img{
+
+    width:200px;
+    height:200px;
+    border-radius: 100px;
+    border:1px solid lightslategray;
+
+}
+
+.visualizar b{
+    font-size:20px;
+}
+.visualizar td{
+    font-size:20px;
+    padding: 10px 50px 40px 50px;
+}
+
+.borda{
+    border:5px solid #0073e6;
+}
