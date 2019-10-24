@@ -18,9 +18,9 @@ def clienteList(request):
     elif filter:
         tasks = Task.objects.filter(status=filter, user=request.user)
     else:
-        tasks_list = Task.objects.all().order_by('-created_at').filter(user=request.user)
+        cliente_list = Task.objects.all().order_by('-created_at').filter(user=request.user)
 
-        paginator = Paginator(tasks_list, 500)
+        paginator = Paginator(cliente_list, 5)
 
         page = request.GET.get('page')
         tasks = paginator.get_page(page)
