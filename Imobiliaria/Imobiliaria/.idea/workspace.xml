@@ -3,6 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="964d1568-9efc-46e7-a18d-c07ced2a95c9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Imobiliaria/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Imobiliaria/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuario/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/static/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuario/templates/Usuario/visualizar.html" beforeDir="false" afterPath="$PROJECT_DIR$/Usuario/templates/Usuario/visualizar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/registration/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/registration/register.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,6 +60,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\bruno\Desktop\ImobThink1\ImobThink\Imobiliaria\Imobiliaria\accounts" />
       <recent name="C:\Users\bruno\Desktop\ImobThink1\ImobThink\Imobiliaria\Imobiliaria\Usuario\templates" />
       <recent name="C:\Users\bruno\Desktop\ImobThink1\ImobThink\Imobiliaria\Imobiliaria\Usuario\templates\Usuario" />
       <recent name="C:\Users\bruno\Desktop\ImobThink1\ImobThink\Imobiliaria\Imobiliaria\Imobiliaria\templates\Principal" />
@@ -124,6 +130,7 @@
       <workItem from="1571764879196" duration="10667000" />
       <workItem from="1571829827135" duration="4680000" />
       <workItem from="1571870759472" duration="385000" />
+      <workItem from="1571917259196" duration="5525000" />
     </task>
     <servers />
   </component>
