@@ -1,8 +1,7 @@
 from django.db import models
 
-
 # Create your models here.
-class imovel(models.Model):
+class imovel(models.Model): 
     tiposImovel=(
         ('Casa', 'Casa'),
         ('Apartamento','Apartamento'),
