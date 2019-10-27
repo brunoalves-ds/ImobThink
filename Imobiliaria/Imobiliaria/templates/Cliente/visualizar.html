@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title  %} Visualizar Cliente {% endblock %}
+
+{% block content %}
+<table class="table">
+    <tr>Nome: {{ task.nome }} </tr>
+    <tr>Gênero: {{ task.genero }} </tr>
+    <tr>Endereço: {{ task.endereco }}</tr>
+    <tr>Número: {{ task.numero }}</tr>
+    <tr>Bairro: {{ task.bairro }}</tr>
+    <tr>Cidade: {{ task.cidade }}</tr>
+    <tr>UF: {{ task.UF }}</tr>
+    <tr>CEP: {{ task.CEP }}</tr>
+    <tr>E-mail: {{ task.email }}</tr>
+    <tr>CPF: {{ task.CPF }}</tr>
+    <tr>RG: {{ task.RG }}</tr>
+    <tr>Data de Nascimento: {{ task.nascimento }}</tr>
+    <tr>Telefone: {{ task.telefone }}</tr>
+    <tr>Celular: {{ task.celular }}</tr>
+    <tr>Status: {{ task.status }}</tr>
+    <tr>Informações Adicionais: {{ task.informacoes_adicionais }}</tr>
+</table>
+<a href="../" class="btn btn-success">Voltar</a>
+{% endblock %}

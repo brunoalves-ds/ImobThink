@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+{% block title %} Editando {{ editar.nome }} {% endblock %}
+
+
+{% block content %}
+<body class="fundo">
+    <div class="container conteudo mt-5">
+    <h1 class="mb-3 mt-5"> Editando {{ editar.nome }}</h1>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form|bootstrap }}
+        <input type="submit" class="btn btn-dark mb-5 mt-3" value="Editar Usuário">
+        <a href="../" class="btn btn-dark mb-5 mt-3"> Voltar </a>
+    </form>
+    </div>
+</body>
+{% endblock %}

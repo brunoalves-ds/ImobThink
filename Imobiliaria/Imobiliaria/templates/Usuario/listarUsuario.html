@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% block title %} Listar Usuário {% endblock %}
+
+
+{% block content %}
+    <div class="body container">
+    <h1 class="mb-5">Bem vindo</h1>
+    <table class="table" >
+        <thead class="thead-dark">
+            <tr>
+            <th scope="col">Imagens</th>
+            <th scope="col">Tipo Usuário</th>
+            <th scope="col">Status Usuário</th>
+            <th scope="col">Nome do Usuário</th>
+            <th scope="col">Login</th>
+            <th scope="col">Última Atualização</th>
+            <th colspan="2">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li {% if message.tags %}class="alert alert-success" {% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {%  endif %}
+        {% for dados in dados %}
+            <tr>
+            <th scope="row">
+                <img src="../media/{{ dados.foto }}" alt="Não possui foto">
+            </th>
+            <th scope="row">{{dados.Tipo_Usuario}} </th>
+            <td>{{dados.Tipo_Status_Usuario}}</td>
+
+                    <td > <a href="visualizar/{{ dados.id }}">{{dados.Nome_Usuario}} </a></td>
+
+            <td>{{dados.Login_Usuario}}</td>
+            <td>{{dados.updated_at}}</td>
+            <td>
+               <a href="editarusuario/{{ dados.id }}" alt="Editar">
+                   <i class="fas fa-user-edit" ></i>
+                  </a>
+            </td>
+            <td>
+                <a href="excluirusuario/{{ dados.id }}" alt="Excluir" class="delete-btn">
+                <i class="fas fa-user-times"></i>
+                </a>
+            </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    </div>
+        <a href="novousuario/{{ dados.id }}" class="ml-4">
+            <button class="btn btn-dark mt-3">
+                Adicione seu novo Usuário
+            </button>
+        </a>
+                <a href="inativado/">
+            <button class="btn btn-dark mt-3">
+                Usuários Inativados
+            </button>
+        </a>
+<div class="pagination">
+    <span class="step-links">
+        {% if dados.has_previous %}
+            <a href="?page={{ dados.previous_page_number }}"> <i class="fas fa-arrow-left"> </i> </a>
+         {% endif %}
+    <span class="current">
+        {{ dados.number }} de {{ dados.paginator.num_pages }}
+    </span>
+        {% if dados.has_next %}
+            <a href="?page={{ dados.next_page_number }}"> <i class="fas fa-arrow-right"> </i> </a>
+    {% endif %}
+    </span>
+</div>
+{% endblock %}

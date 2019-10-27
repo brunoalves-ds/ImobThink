@@ -8,4 +8,4 @@ from django.contrib import messages
 
 def principal(request):
     dados = Usuario.objects.filter(Tipo_Status_Usuario='Ativado')
-    return render(request, 'dash.html', {'dados': dados})
+    return render(request, '../templates/dash.html', {'dados': dados})

@@ -23,7 +23,7 @@ def imovelList(request):
 
         imoveis = paginator.get_page(page)
 
-    return render(request, 'imovel/imovel-list.html',{'imoveis': imoveis})
+    return render(request, 'imovel/imovel-list.html', {'imoveis': imoveis})
 
 def imovelView(request, id):
     imoveis = get_object_or_404(imovel, pk=id)

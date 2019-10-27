@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+
+{% block title %}Lista de cliente{% endblock %}
+
+{% block content %}
+<div class="offset-1 col-10 list-div">
+    <h1>Lista de cliente</h1>
+    <a id="add-link" href="novocliente/">
+        <div class="col-2 add-div">
+            <i class="fas fa-plus"></i> Adicionar novo Cliente
+        </div>
+    </a>
+    <div class="col-9 search-div">
+        <form method="GET" id="search-form">
+            <input class="form-control" type="text" id="search" name="search" placeholder="Digite o nome do cliente para buscar..." value="{{ request.GET.search }}">
+            <i class="fas fa-search" id="search-btn"></i>
+        </form>
+    </div>
+    <div class="col-12 filter-div">
+        <span>Filtrar por:</span>
+        <select name="filter" id="filter" class="form-control">
+            <option value="">Escolha uma opção...</option>
+            <option value="ativo">Clientes ativos</option>
+            <option value="inativo">Clientes inativos</option>
+        </select>
+    </div>
+    {% if messages %}
+    <ul class="messages mt-4">
+        {% for message in messages %}
+        <li {% if message.tags %} class="alert alert-{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    <table class="table mt-4">
+        <thead class="thead-dark">
+        <tr>
+            <th>Nome do Usuário</th>
+            <th>Nome </th>
+            <th> CPF </th>
+            <th> Status </th>
+            <th>Imóvel Vinculado</th>
+            <th>Tipo Cliente</th>
+            <th colspan="2"> Ações </th>
+        </tr>
+        </thead>
+        {% for task in tasks %}
+        <tbody>
+        <tr>
+
+            <td><a href="visualizar/{{task.id}}">{{task.nome}}</a></td>
+            <td>{{task.CPF}}</td>
+            <td>{{task.status}}</td>
+            <td>{{ task.usuario }}</td>
+            <td>{{ task.imovel }}</td>
+            <td>{{ task.tipoCliente }}</td>
+            <td><a href="editarcliente/{{task.id}}"><span><i class="fas fa-edit"></i></span></a></td>
+            <td><a href="excluircliente/{{task.id}}" class="delete-btn"><span><i class="fas fa-trash"></i></span></a></td>
+
+        </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+    <div class="pagination">
+        <span class="step-links">
+            {% if tasks.has_previous %}
+                <a href="?page={{ tasks.previous_page_number }}"><i class="fas fa-arrow-left"></i></a>
+            {% endif %}
+
+            {% if tasks.paginator.num_pages %}
+            <span class="current">
+                {{ tasks.number }} de {{ tasks.paginator.num_pages }}
+            </span>
+            {% endif %}
+
+            {% if tasks.has_next %}
+                <a href="?page={{ tasks.next_page_number }}"><i class="fas fa-arrow-right"></i></a>
+            {% endif %}
+        </span>
+    </div>
+    <!--
+    <ul class="task-list">
+        {% for task in tasks %}
+        {% if task.status == 'ativo' %}
+            <li class="task-item">
+        {% else %}
+            <li class="task-item done">
+        {% endif %}
+
+               <span><a href="/task/{{task.id}}">{{task.nome}}</a></span>
+                <a href="delete/{{task.id}}" class="delete-btn"><span><i class="fas fa-trash"></i></span></a>
+                <a href="edit/{{task.id}}"><span><i class="fas fa-edit"></i></span></a>
+            </li>
+        {% endfor %}
+    </ul>
+    -->
+</div>
+{% endblock %}
