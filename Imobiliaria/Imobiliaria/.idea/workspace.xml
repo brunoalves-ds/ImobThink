@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="964d1568-9efc-46e7-a18d-c07ced2a95c9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Cliente/novocliente.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Cliente/novocliente.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +54,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../integracao-imobiliaria" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
@@ -131,6 +132,10 @@
       <workItem from="1571917259196" duration="6049000" />
       <workItem from="1572061431943" duration="17000" />
       <workItem from="1572185497859" duration="15505000" />
+      <workItem from="1572217200959" duration="693000" />
+      <workItem from="1572223101553" duration="173000" />
+      <workItem from="1572223458551" duration="2358000" />
+      <workItem from="1572226018576" duration="1510000" />
     </task>
     <servers />
   </component>
