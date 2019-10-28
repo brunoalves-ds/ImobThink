@@ -44,21 +44,34 @@
         </tr>
         </thead>
         {% for task in tasks %}
+
         <tbody>
         <tr>
-
-            <td><a href="visualizar/{{task.id}}">{{task.nome}}</a></td>
+            <td>
+                <a href="visualizarusuario/{{task.usuario}}" target="_blank" >
+                    {{ task.usuario }}
+                </a>
+            </td>
+             <td>
+                 <a href="visualizar/{{task.id}}" target="_blank">
+                     {{task.nome}}
+                 </a>
+             </td>
             <td>{{task.CPF}}</td>
             <td>{{task.status}}</td>
-            <td>{{ task.usuario }}</td>
-            <td>{{ task.imovel }}</td>
+            <td>
+                <a href="visualizarimovel/{{ task.imovel }}">
+                    {{ task.imovel }}
+                </a>
+            </td>
             <td>{{ task.tipoCliente }}</td>
             <td><a href="editarcliente/{{task.id}}"><span><i class="fas fa-edit"></i></span></a></td>
             <td><a href="excluircliente/{{task.id}}" class="delete-btn"><span><i class="fas fa-trash"></i></span></a></td>
 
         </tr>
-        </tbody>
         {% endfor %}
+        </tbody>
+
     </table>
     <div class="pagination">
         <span class="step-links">
