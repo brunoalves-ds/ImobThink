@@ -1,4 +1,8 @@
 
+body {
+    font-family: jomolhari;
+}
+
 thead tr th{
     text-align: center;
 }
@@ -26,16 +30,24 @@ img {
 }
 
 .container-fluid {
+    background-color: #f7f5e6 ;
     padding: 0;
+    opacity: 50% ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* Navbar */
 
 .navbar  {
-    border-bottom: 1px solid #26A69A;
-    margin-bottom: 20px;
+    margin-bottom: 20px;    background-position: center;
+    background-color: #52658f;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    color: white;
 }
-
 .navbar-nav {
     margin: auto;
 }
@@ -91,19 +103,41 @@ img {
 /* Imoveis */
 
 .list-div {
-    padding: 0;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    background-color: #e8e8e8;
 }
 
-.task-list {
+.endereco {
+    font-size: 22px;
+}
+
+.endereco  a{
+    text-decoration:none;
+    color: black;   
+}
+
+.imovel-list {
     padding-left: 0;
 }
 
-.task-item {
+.titulo {
+    font-size: 28px;
+    color: black;
+}
+.imovel-item {
     list-style: none;
     font-size: 20px;
     height: 50px;
     padding-top: 10px;
     border-bottom: 1px dashed #CCC;
+}
+
+.d-block{
+    width: 620px;
+    height: 350px;
 }
 
 .fas.fa-trash {
@@ -124,13 +158,19 @@ img {
 
 /* Rodapé */
 footer {
-    background-color: #29B6F6;
-    border-top: 2px solid #26C6DA;
+    border-top: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px; 
+    background-color: #333a56;
 }
 
+
 footer li, h3  {
+    color:white;
     list-style: none;
-    color: #f5f5f5;
+    color: ;
     text-align: center;
     top: 10%;
     position: relative;
