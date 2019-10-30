@@ -99,6 +99,19 @@ img {
 
 }
 
+/* filter*/
+
+.filter-div {
+    margin-bottom: 15px;
+    padding: 0;
+}
+
+#filter {
+    display: inline-block;
+    width: 200px;
+    margin-left: 10px;
+}
+
 /* Imoveis */
 
 .list-div {
@@ -210,4 +223,23 @@ footer li, h3  {
 
 .borda{
     border:5px solid #0073e6;
+}
+
+/* Login */
+.auth-card {
+    margin-bottom: 30px;
+}
+
+.change-form-p {
+    margin-top: 30px;
+    text-align: center;
+}
+
+
+.container-fluid {
+    padding: 0;
+}
+
+.container-fluid .row {
+    margin: 0;
 }

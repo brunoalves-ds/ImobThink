@@ -24,14 +24,19 @@
             <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="/Imovel">Imoveis</a>
+                        <a class="nav-link" href="/Usuario">Usuarios</a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="/Cliente">Clientes</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="/Usuario">Usuarios</a>
+                        <a class="nav-link" href="/Imovel">Imoveis</a>
                     </li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/accounts/logout">Sair</a>
+                    </li>
+                    {% endif %}
                 </ul>
             </div>
         </nav>

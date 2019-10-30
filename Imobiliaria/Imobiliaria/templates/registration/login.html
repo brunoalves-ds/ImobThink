@@ -1,20 +1,20 @@
-{% extends  'base.html' %}
-{% load crispy_forms_tags %}
+{% extends  'base-login.html' %}
+{% load bootstrap %}
 
-{% block title %}Entrar{% endblock %}
+{% block title %}Entrar no Imobthink{% endblock %}
 
 {% block content %}
 <div class="row">
     <div class="col-md-4 offset-md-4">
         <div class="card  auth-card">
             <div class="card-body">
-                <h4 class="card-title text-center">Entrar no Imobthink</h4>
+                <h4 class="card-title text-center">Login Imobthink</h4>
 
                 <form method="post">
                     {% csrf_token %}
                     <input type="hidden" name="next" value="{{ next }}">
 
-                    {{ form|crispy }}
+                    {{ form|bootstrap }}
 
                     <button type="submit" class="btn btn-primary btn-block">Entrar</button>
                 </form>

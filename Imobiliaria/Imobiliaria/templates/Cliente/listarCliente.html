@@ -11,17 +11,17 @@
         </div>
     </a>
     <div class="col-9 search-div">
-        <form method="GET" id="search-form">
+        <form method="GET" id="search-form-cliente">
             <input class="form-control" type="text" id="search" name="search" placeholder="Digite o nome do cliente para buscar..." value="{{ request.GET.search }}">
-            <i class="fas fa-search" id="search-btn"></i>
+            <i class="fas fa-search" id="search-btn-cliente"></i>
         </form>
     </div>
     <div class="col-12 filter-div">
         <span>Filtrar por:</span>
-        <select name="filter" id="filter" class="form-control">
+        <select name="filter" id="filter" class="form-control" value="{{ request.GET.filter}}">
             <option value="">Escolha uma opção...</option>
-            <option value="ativo">Clientes ativos</option>
-            <option value="inativo">Clientes inativos</option>
+            <option value="Ativado">Clientes ativos</option>
+            <option value="Inativado">Clientes inativos</option>
         </select>
     </div>
     {% if messages %}
