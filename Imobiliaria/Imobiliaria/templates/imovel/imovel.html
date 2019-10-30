@@ -7,13 +7,13 @@
     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-100" src="/media/{{ imoveis.foto1 }}" alt="Primeiro Slide">
+                <img class="d-block" src="/media/{{ imoveis.foto1 }}" alt="Primeiro Slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="/media/{{ imoveis.foto2 }}" alt="Segundo Slide">
+                <img class="d-block" src="/media/{{ imoveis.foto2 }}" alt="Segundo Slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="/media/{{ imoveis.foto3 }}" alt="Terceiro Slide">
+                <img class="d-block" src="/media/{{ imoveis.foto3 }}" alt="Terceiro Slide">
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
@@ -26,18 +26,26 @@
         </a>
     </div>
     <div class="media-body">
-        <h5 class="mt-0">{{ imoveis.endereco }}</h5>
+        <div id="imoveis.endereco">
+            <h5 class="endereco">{{ imoveis.endereco }}</h5>
+        </div>
+        <div class="imovel.status"><label>Status:</label> {{ imoveis.status }}
+            {% if imoveis.status == "Ativo" %}
+            <i class="fas fa-check-circle"></i>
+            {% endif %}
+            {% if imoveis.status == "Inativo" %}
+            <i class="fas fa-times-circle"></i>
+            {% endif %}
+        </div>
         <div class="offset-1 col-10 list-div">
-            <h1></h1>
-            <p>{{ imoveis.status }}</p>
-            <p>{{ imoveis.preco }}</p>
-            <p>{{ imoveis.cep }}</p>
-            <p>{{ imoveis.tamanho }}</p>
-            <p>{{ imoveis.quartos }}</p>
-            <p>{{ imoveis.andares }}</p>
-            <p>{{ imoveis.created_at }}</p>
-            <p>{{ imoveis.update_at }}</p>
+            <div class="imoveis.preco"><label>Preço: R$</label> {{ imoveis.preco }}</div>
+            <div class="imoveis.cep"><label>CEP:</label> {{ imoveis.cep }}</div>
+            <div class="imoveis.tamanho"><label>Tamanho (m²):</label> {{ imoveis.tamanho }}</div>
+            <div class="imoveis.quartos"><label>Qtd. Quartos:</label> {{ imoveis.quartos }}</div>
+            <div class="imoveis.andares"><label>Andares:</label> {{ imoveis.andares }}</div>
         </div>
     </div>
 </div>
+<div class="imoveis.created_at"><label>Create At:</label> {{ imoveis.created_at }}</div>
+<div class="imoveis.update_at"><label>Update At:</label> {{ imoveis.update_at }}</div>
 {% endblock %}

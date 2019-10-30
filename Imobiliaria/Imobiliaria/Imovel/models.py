@@ -13,7 +13,7 @@ class imovel(models.Model):
     )
     tipoImovel = models.CharField(max_length=20, choices=tiposImovel,default='')
     status = models.CharField(max_length=8  , choices=tiposStatus,default='')
-    preco = models.DecimalField(max_digits=19, decimal_places=10)
+    preco = models.DecimalField(max_digits=19, decimal_places=2)
     cep = models.CharField(max_length=8,default='')
     endereco = models.CharField(max_length=250,default='')
     tamanho = models.PositiveIntegerField()
