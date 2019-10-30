@@ -5,6 +5,27 @@
 {% block content %}
     <div class="body container">
     <h1 class="mb-5">Bem vindo</h1>
+
+    <a id="add-link" href="novousuario/{{ dados.id }}" >
+        <div class="col-2 add-div">
+            <i class="fas fa-plus"></i> Adicionar novo Usuario
+        </div>
+    </a>
+    <div class="col-9 search-div">
+        <form method="GET" id="search-form-usuario">
+            <input class="form-control" type="text" id="search" name="search" placeholder="Digite o nome do usuario para buscar..." value="{{ request.GET.search }}">
+            <i class="fas fa-search" id="search-btn-usuario"></i>
+        </form>
+    </div>
+    <div class="col-12 filter-div">
+        <span>Filtrar por:</span>
+        <select name="filter" id="filter" class="form-control">
+            <option value="">Escolha uma opção...</option>
+            <option value="Ativado">Usuarios ativos</option>
+            <option value="Inativado">Usuarios inativos</option>
+        </select>
+    </div>
+
     <table class="table" >
         <thead class="thead-dark">
             <tr>
@@ -52,16 +73,6 @@
         </tbody>
     </table>
     </div>
-        <a href="novousuario/{{ dados.id }}" class="ml-4">
-            <button class="btn btn-dark mt-3">
-                Adicione seu novo Usuário
-            </button>
-        </a>
-                <a href="inativado/">
-            <button class="btn btn-dark mt-3">
-                Usuários Inativados
-            </button>
-        </a>
 <div class="pagination">
     <span class="step-links">
         {% if dados.has_previous %}
