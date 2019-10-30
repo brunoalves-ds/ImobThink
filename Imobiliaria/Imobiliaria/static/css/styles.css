@@ -1,3 +1,4 @@
+/* base.html */
 
 body {
     font-family: jomolhari;
@@ -102,6 +103,18 @@ img {
 
 /* Imoveis */
 
+.media {
+    margin-left: 20px;
+}
+
+.fas.fa-times-circle {
+    color: #db1e47;
+}
+
+.fas.fa-check-circle {
+    color: #13c43f;
+}
+
 .list-div {
     padding: 20px;
     border-radius: 5px;
@@ -136,6 +149,7 @@ img {
 }
 
 .d-block{
+    position: relative;
     width: 620px;
     height: 350px;
 }
