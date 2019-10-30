@@ -2,6 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="964d1568-9efc-46e7-a18d-c07ced2a95c9" name="Default Changelist" comment="">
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/.idea/Imobiliaria.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Imobiliaria.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/migrations/0002_auto_20191027_2204.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/models.py" afterDir="false" />
+=======
       <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/easy-install.pth" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/setuptools.pth" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/venv/Scripts/Activate.ps1" afterDir="false" />
@@ -29,6 +38,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/Imobiliaria.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Imobiliaria.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> Yuke
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +94,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/Programs/Python/Python38-32/Scripts" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>

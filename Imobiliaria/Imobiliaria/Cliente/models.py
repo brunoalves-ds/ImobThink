@@ -90,12 +90,10 @@ class Cliente(models.Model):
     CPF = models.CharField('CPF', max_length=11, unique=True)
     RG = models.CharField(max_length=7, unique=True)
     nascimento = models.DateField(verbose_name='data de nascimento')
-    telefone = models.CharField(max_length=10, unique=True, blank=True, null=True)
     celular = models.CharField(max_length=11, unique=True)
     status = models.CharField(max_length=9, choices=STATUS)
     informacoes_adicionais = models.TextField(blank=True, null=True)
-
-    #usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
+    usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
