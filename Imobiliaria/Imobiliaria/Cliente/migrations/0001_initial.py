@@ -31,7 +31,6 @@ class Migration(migrations.Migration):
                 ('CPF', models.CharField(max_length=11, unique=True, verbose_name='CPF')),
                 ('RG', models.CharField(max_length=7, unique=True)),
                 ('nascimento', models.DateField(verbose_name='data de nascimento')),
-                ('telefone', models.CharField(max_length=10, unique=True)),
                 ('celular', models.CharField(max_length=11, unique=True)),
                 ('status', models.CharField(choices=[('Inativado', 'Inativado'), ('Ativado', 'Ativado')], max_length=7)),
                 ('informacoes_adicionais', models.TextField()),
