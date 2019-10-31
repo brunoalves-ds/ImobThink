@@ -102,6 +102,16 @@ img {
 }
 
 /* Imoveis */
+.imovel-view{
+    margin-left: 20px;
+}
+
+.imovel-descricao {
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 80px;
+    background-color: #e8e8e8;
+}
 
 .media {
     margin-left: 20px;
@@ -113,6 +123,20 @@ img {
 
 .fas.fa-check-circle {
     color: #13c43f;
+}
+
+.imovel-div {
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    width: 400px;
+    height: 250px;
+    margin-bottom: 80px;
+    background-color: #e8e8e8;
+}
+
+.imoveis-preco{
+    font-size: 18pt;
 }
 
 .list-div {

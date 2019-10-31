@@ -25,7 +25,7 @@
             <span class="sr-only">Próximo</span>
         </a>
     </div>
-    <div class="media-body">
+    <div class="imovel-view">
         <div id="imoveis.endereco">
             <h5 class="endereco">{{ imoveis.endereco }}</h5>
         </div>
@@ -37,15 +37,18 @@
             <i class="fas fa-times-circle"></i>
             {% endif %}
         </div>
-        <div class="offset-1 col-10 list-div">
-            <div class="imoveis.preco"><label>Preço: R$</label> {{ imoveis.preco }}</div>
-            <div class="imoveis.cep"><label>CEP:</label> {{ imoveis.cep }}</div>
-            <div class="imoveis.tamanho"><label>Tamanho (m²):</label> {{ imoveis.tamanho }}</div>
-            <div class="imoveis.quartos"><label>Qtd. Quartos:</label> {{ imoveis.quartos }}</div>
-            <div class="imoveis.andares"><label>Andares:</label> {{ imoveis.andares }}</div>
+        <div class="offset-1 col-10 imovel-div">
+            <div class="imoveis-cep"><label>CEP:</label> <strong>{{ imoveis.cep }}</strong></div>
+            <div class="imoveis-tamanho"><label>Tamanho (m²):</label> <strong>{{ imoveis.tamanho }}</strong></div>
+            <div class="imoveis-quartos"><label>Qtd. Quartos:</label> <strong>{{ imoveis.quartos }}</strong></div>
+            <div class="imoveis-andares"><label>Andares:</label> <strong>{{ imoveis.andares }}</strong></div>
+            <div class="imoveis-preco"><label>Preço: <strong>R$</label> {{ imoveis.preco }}</strong></div>
         </div>
     </div>
 </div>
-<div class="imoveis.created_at"><label>Create At:</label> {{ imoveis.created_at }}</div>
-<div class="imoveis.update_at"><label>Update At:</label> {{ imoveis.update_at }}</div>
+<div class="offset-1 col-10 imovel-descricao">
+    {{imoveis.descricao}}
+</div>
+<div class="imoveis-created_at"><label>Create At:</label> {{ imoveis.created_at }}</div>
+<div class="imoveis-update_at"><label>Update At:</label> {{ imoveis.update_at }}</div>
 {% endblock %}
