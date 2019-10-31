@@ -23,6 +23,7 @@
             </button>
             <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
                 <ul class="navbar-nav mr-auto">
+
                     <li class="nav-item active">
                         <a class="nav-link" href="/Usuario">Usuarios</a>
                     </li>
@@ -32,6 +33,11 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="/Imovel">Imoveis</a>
                     </li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/accounts/logout">Sair</a>
+                    </li>
+                    {% endif %}
                 </ul>
             </div>
         </nav>
@@ -44,7 +50,7 @@
                 <li>William Silva Dias - 201810411</li>
                 <li>Bruno Alves Dias - 201810385</li>
                 <li>Gabryella Maia Popolin de Amolim - 201720188</li>
-                <li>Davi Furtado de Oliveira - 201811201</li>
+                <li>David Furtado de Oliveira - 201811201</li>
             </ul>
         </footer>
     </div>

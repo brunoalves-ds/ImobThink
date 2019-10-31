@@ -1,13 +1,28 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Cliente
 from .forms import ClienteForm
+from django.core.paginator import Paginator
 from django.contrib import messages
 from Usuario.models import Usuario
 from Imovel.models import imovel
 
 # Create your views here.
 def listarcliente(request):
-    tasks = Cliente.objects.all()
+
+    search = request.GET.get('search')
+    filter = request.GET.get('filter')
+
+    if search:
+        tasks = Cliente.objects.filter(nome__icontains=search)
+    elif filter:
+        tasks = Cliente.objects.filter(status=filter)
+    else:
+        cliente_list = Cliente.objects.all().order_by('-created_at').filter()
+
+        paginator = Paginator(cliente_list, 3)
+
+        page = request.GET.get('page')
+        tasks = paginator.get_page(page)
     return render(request, 'Cliente/listarCliente.html', {'tasks': tasks})
 
 
