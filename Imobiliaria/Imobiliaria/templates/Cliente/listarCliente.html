@@ -7,7 +7,7 @@
     <h1>Lista de cliente</h1>
     <a id="add-link" href="novocliente/">
         <div class="col-2 add-div">
-            <i class="fas fa-plus"></i> Adicionar novo Cliente
+            <i class="fas fa-plus"></i> Cadastrar Cliente
         </div>
     </a>
     <div class="col-9 search-div">
@@ -38,7 +38,6 @@
             <th>Nome </th>
             <th> CPF </th>
             <th> Status </th>
-            <th>Imóvel Vinculado</th>
             <th>Tipo Cliente</th>
             <th colspan="2"> Ações </th>
         </tr>
@@ -59,11 +58,6 @@
              </td>
             <td>{{task.CPF}}</td>
             <td>{{task.status}}</td>
-            <td>
-                <a href="visualizarimovel/{{ task.imovel }}">
-                    {{ task.imovel }}
-                </a>
-            </td>
             <td>{{ task.tipoCliente }}</td>
             <td><a href="editarcliente/{{task.id}}"><span><i class="fas fa-edit"></i></span></a></td>
             <td><a href="excluircliente/{{task.id}}" class="delete-btn"><span><i class="fas fa-trash"></i></span></a></td>
