@@ -9,8 +9,8 @@
     <h1 class="mb-3 mt-5"> Cadastre seu Cliente</h1>
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
-
-        <input type="submit" class="btn btn-dark mb-5 mt-3" value="Editar Usuário">
+        {{ form|bootstrap }}
+        <input type="submit" class="btn btn-success" value="Cadastrar Cliente">
         <a href="../" class="btn btn-dark mb-5 mt-3"> Voltar </a>
     </form>
     </div>

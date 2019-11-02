@@ -1,6 +1,5 @@
 from django.db import models
 from Usuario.models import Usuario
-from Imovel.models import imovel
 from django.contrib.auth import get_user_model
 
 
@@ -78,7 +77,6 @@ class Cliente(models.Model):
     usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE, verbose_name='Usuario')
     nome = models.CharField(max_length=50, verbose_name='Nome Completo')
     genero = models.CharField(max_length=9, choices=SEXO_CHOICES)
-    imovel = models.ForeignKey(imovel, max_length=4, on_delete=models.CASCADE, verbose_name='Imóvel para Locação')
     tipoCliente = models.CharField(max_length=20, choices=tipoClientes)
     endereco = models.CharField(max_length=300)
     numero = models.CharField(max_length=4)
