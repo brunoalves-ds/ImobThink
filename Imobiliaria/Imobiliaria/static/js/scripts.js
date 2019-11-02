@@ -3,10 +3,8 @@ $( document ).ready(function() {
 
     var baseUrl   = 'http://127.0.0.1:8000/';
     var deleteBtn = $('.delete-btn');
-    var searchBtn-cliente = $('#search-btn-cliente');
-    var searchForm-cliente = $('#search-form-cliente');
-    var searchBtn-usuario = $('#search-btn-usuario');
-    var searchForm-usuario = $('#search-form-usuario');
+    var searchBtn = $('#search-btn-cliente');
+    var searchForm = $('#search-form-cliente');
     var filter     = $('#filter');
 
     $(deleteBtn).on('click', function(e) {
