@@ -1,3 +1,4 @@
+/* base.html */
 
 body {
     font-family: jomolhari;
@@ -99,7 +100,56 @@ img {
 
 }
 
+/* filter*/
+
+.filter-div {
+    margin-bottom: 15px;
+    padding: 0;
+}
+
+#filter {
+    display: inline-block;
+    width: 200px;
+    margin-left: 10px;
+}
+
 /* Imoveis */
+.imovel-view{
+    margin-left: 20px;
+}
+
+.imovel-descricao {
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 80px;
+    background-color: #e8e8e8;
+}
+
+.media {
+    margin-left: 20px;
+}
+
+.fas.fa-times-circle {
+    color: #db1e47;
+}
+
+.fas.fa-check-circle {
+    color: #13c43f;
+}
+
+.imovel-div {
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    width: 400px;
+    height: 250px;
+    margin-bottom: 80px;
+    background-color: #e8e8e8;
+}
+
+.imoveis-preco{
+    font-size: 18pt;
+}
 
 .list-div {
     padding: 20px;
@@ -135,6 +185,7 @@ img {
 }
 
 .d-block{
+    position: relative;
     width: 620px;
     height: 350px;
 }
@@ -169,6 +220,7 @@ footer {
 footer li, h3  {
     color:white;
     list-style: none;
+    color: ;
     text-align: center;
     top: 10%;
     position: relative;
@@ -210,4 +262,23 @@ footer li, h3  {
 
 .borda{
     border:5px solid #0073e6;
+}
+
+/* Login */
+.auth-card {
+    margin-bottom: 30px;
+}
+
+.change-form-p {
+    margin-top: 30px;
+    text-align: center;
+}
+
+
+.container-fluid {
+    padding: 0;
+}
+
+.container-fluid .row {
+    margin: 0;
 }

@@ -6,6 +6,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/Imobiliaria.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Imobiliaria.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/templates/Cliente/novocliente.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Cliente/novocliente.html" afterDir="false" />
+=======
       <change beforePath="$PROJECT_DIR$/Cliente/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cliente/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/migrations/0001_initial.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cliente/migrations/0002_auto_20191027_2204.py" beforeDir="false" />
@@ -39,6 +42,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
 >>>>>>> Yuke
+>>>>>>> 0a25fc41e3735902c34b0d77f0fb676080705040
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -176,8 +180,7 @@
       <workItem from="1572217200959" duration="693000" />
       <workItem from="1572223101553" duration="173000" />
       <workItem from="1572223458551" duration="2358000" />
-      <workItem from="1572226018576" duration="1876000" />
-      <workItem from="1572228237645" duration="821000" />
+      <workItem from="1572226018576" duration="1510000" />
     </task>
     <servers />
   </component>
