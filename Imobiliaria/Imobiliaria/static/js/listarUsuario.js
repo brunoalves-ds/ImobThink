@@ -3,5 +3,9 @@ $(filtro).change(function() {
         var filtro     = $('#filtro');
         var filtro = $(this).val();
         window.location.href = baseUrl + '?filtro=' + filtro;
+<<<<<<< HEAD
     });
 
+=======
+    });
+>>>>>>> Forest
