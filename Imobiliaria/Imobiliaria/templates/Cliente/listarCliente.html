@@ -17,11 +17,11 @@
         </form>
     </div>
     <div class="col-12 filter-div">
-        <span>Filtrar por:</span>
-        <select name="filter" id="filter" class="form-control" value="{{ request.GET.filter}}">
-            <option value="">Escolha uma opção...</option>
-            <option value="Ativado">Clientes ativos</option>
-            <option value="Inativado">Clientes inativos</option>
+        <span> Filtrar Por:</span>
+        <select name="filter" id="filter" class="form-control">
+            <option value="" name="filter"> Escolha uma opção</option>
+            <option value="Ativado" name="filter"> Ativado </option>
+            <option value="Inativado" name="filter"> Inativado </option>
         </select>
     </div>
     {% if messages %}

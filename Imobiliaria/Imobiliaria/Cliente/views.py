@@ -6,6 +6,7 @@ from django.contrib import messages
 from Usuario.models import Usuario
 from Imovel.models import imovel
 
+
 # Create your views here.
 def listarcliente(request):
 
