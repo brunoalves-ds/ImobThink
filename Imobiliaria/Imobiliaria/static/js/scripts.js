@@ -1,11 +1,10 @@
 
 $( document ).ready(function() {
 
-    var baseUrl   = 'http://127.0.0.1:8000/';
+
     var deleteBtn = $('.delete-btn');
     var searchBtn = $('#search-btn-cliente');
     var searchForm = $('#search-form-cliente');
-    var filter     = $('#filter');
 
     $(deleteBtn).on('click', function(e) {
 
@@ -27,9 +26,13 @@ $( document ).ready(function() {
         searchForm-usuario.submit();
     });
 
-    $(filter).change(function() {
+
+
+});
+
+$(filter).change(function() {
+        var baseUrl   = 'http://127.0.0.1:8000/Cliente/';
+        var filter     = $('#filter');
         var filter = $(this).val();
         window.location.href = baseUrl + '?filter=' + filter;
     });
-
-});

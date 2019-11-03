@@ -9,13 +9,13 @@ from django.core.paginator import Paginator
 @login_required
 def listarusuario(request):
     search = request.GET.get('search')
-    filter = request.GET.get('filter')
+    filtro = request.GET.get('filtro')
 
 
     if search:
         dados = Usuario.objects.filter(Nome_Usuario__icontains=search)
-    elif filter:
-        dados = Usuario.objects.filter(Tipo_Status_Usuario=filter)
+    elif filtro:
+        dados = Usuario.objects.filter(Tipo_Status_Usuario=filtro)
     else:
         usuario_list = Usuario.objects.all().order_by('-created_at').filter()
 
