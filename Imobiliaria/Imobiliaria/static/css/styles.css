@@ -137,12 +137,20 @@ img {
     color: #13c43f;
 }
 
+#div-cliente {
+    width: 0px;
+    height: 200px;
+}
+
+#div-imovel {
+    width: 280px;
+    height: 240px;
+}
+
 .imovel-div {
     padding: 20px;
     border-radius: 5px;
     margin-top: 20px;
-    width: 400px;
-    height: 250px;
     margin-bottom: 80px;
     background-color: #e8e8e8;
 }

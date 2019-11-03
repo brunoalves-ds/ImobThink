@@ -91,6 +91,7 @@ class Cliente(models.Model):
     celular = models.CharField(max_length=11, unique=True)
     status = models.CharField(max_length=9, choices=STATUS)
     informacoes_adicionais = models.TextField(blank=True, null=True)
+    foto = models.ImageField(upload_to='foto_cliente', null=True, blank=True)
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

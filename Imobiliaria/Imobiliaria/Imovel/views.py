@@ -3,6 +3,7 @@ from django.core.paginator import Paginator
 from .models import imovel
 from .forms import imovelForm   
 from django.contrib import messages
+from Cliente.models import Cliente
 
 # Create your views here.
 def imovelList(request):
