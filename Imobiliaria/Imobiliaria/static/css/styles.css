@@ -121,6 +121,7 @@ img {
 .imovel-descricao {
     padding: 20px;
     border-radius: 5px;
+    margin-top: 20px;
     margin-bottom: 80px;
     background-color: #e8e8e8;
 }
@@ -137,23 +138,30 @@ img {
     color: #13c43f;
 }
 
+.foto-cliente {
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
 #div-cliente {
-    width: 0px;
-    height: 200px;
-}
-
-#div-imovel {
-    width: 280px;
+    width: 240px;
     height: 240px;
-}
-
-.imovel-div {
     padding: 20px;
     border-radius: 5px;
     margin-top: 20px;
     margin-bottom: 80px;
     background-color: #e8e8e8;
 }
+
+#div-imovel {
+    width: 280px;
+    height: 240px;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 80px;
+    background-color: #e8e8e8;
+}   
 
 .imoveis-preco{
     font-size: 18pt;
@@ -174,9 +182,9 @@ img {
 .endereco  a{
     text-decoration:none;
     color: black;   
+    .imovel-list {
 }
 
-.imovel-list {
     padding-left: 0;
 }
 
