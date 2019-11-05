@@ -3,19 +3,24 @@
 {% block title %}Imóveis{% endblock %}
 
 {% block content %}
-<div class="media">
-    <div id="imoveis.endereco">
-        <h5 class="endereco">{{ imoveis.endereco }}</h5>
+<div class="d-flex flex-column">
+    <div class="p-2">
+        <div id="imoveis.endereco">
+            <h5 class="endereco">{{ imoveis.endereco }}</h5>
+        </div>
     </div>
-    <div class="imovel.status"><label>Status:</label> {{ imoveis.status }}
-        {% if imoveis.status == "Ativo" %}
-        <i class="fas fa-check-circle"></i>
-        {% endif %}
-        {% if imoveis.status == "Inativo" %}
-        <i class="fas fa-times-circle"></i>
-        {% endif %}
+    <div class="p-2">
+        <div class="imovel.status"><label>Status:</label> {{ imoveis.status }}
+            {% if imoveis.status == "Ativo" %}
+            <i class="fas fa-check-circle"></i>
+            {% endif %}
+            {% if imoveis.status == "Inativo" %}
+            <i class="fas fa-times-circle"></i>
+            {% endif %}
+        </div>
     </div>
-    <div class="d-flex justify-content-end">
+<div class="p-2">
+    <div class="d-flex justify-content-start">
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -37,24 +42,29 @@
                 <span class="sr-only">Próximo</span>
             </a>
         </div>
-        <div class="imovel-view">
-            <div class="offset-1 col-10 imovel-div" id="div-imovel">
+        <div class="d-flex align-items-center" id="row-imovel">
+            <div class="offset-1 col-10" id="div-imovel">
                 <div class="imoveis-cep"><label>CEP:</label> <strong>{{ imoveis.cep }}</strong></div>
-                <div class="imoveis-tamanho"><label>Tamanho (m²):</label> <strong>{{ imoveis.tamanho }}</strong></div>
-                <div class="imoveis-quartos"><label>Qtd. Quartos:</label> <strong>{{ imoveis.quartos }}</strong></div>
-                <div class="imoveis-andares"><label>Andares:</label> <strong>{{ imoveis.andares }}</strong></div>
+                <div class="imoveis-tamanho"><label>Tamanho (m²):</label> <strong>{{ imoveis.tamanho }}</strong>
+                </div>
+                <div class="imoveis-quartos"><label>Qtd. Quartos:</label> <strong>{{ imoveis.quartos }}</strong>
+                </div>
+                <div class="imoveis-andares"><label>Andares:</label> <strong>{{ imoveis.andares }}</strong>
+                </div>
                 <div class="imoveis-preco"><label>Preço: <strong>R$</label> {{ imoveis.preco }}</strong></div>
             </div>
-            <div class="offset-1 col-10 imovel-div" id="div-cliente">
+            <div class="d-flex align-items-end" id="row-cliente">
+            <div class="offset-1 col-10" id="div-cliente">
                 <div class="foto-cliente"><img src="/media/{{ imoveis.cliente.foto }}"></div>
-                <div class="nome-cliente">{{ imoveis.cliente.nome }}</div>
-                <div class="celular-cliente">{{ imoveis.cliente.celular }}</div>
+                <div class="nome-cliente"><strong><label>Nome:</label></strong> {{ imoveis.cliente.nome }}</div>
+                <div class="celular-cliente"><strong><label>Contato:</label></strong> {{ imoveis.cliente.celular }}</div>
+            </div>
             </div>
         </div>
     </div>
-</div>
-<div class="offset-1 col-10 imovel-descricao">
-    {{imoveis.descricao}}
+    <div class="offset-1 col-10 imovel-descricao">
+        {{imoveis.descricao}}
+    </div>
 </div>
 <div class="imoveis-created_at"><label>Create At:</label> {{ imoveis.created_at }}</div>
 <div class="imoveis-update_at"><label>Update At:</label> {{ imoveis.update_at }}</div>
