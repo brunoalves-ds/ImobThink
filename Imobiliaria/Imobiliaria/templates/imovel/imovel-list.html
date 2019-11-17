@@ -1,10 +1,49 @@
 {% extends 'base.html' %}
-
 {% block title %}Imóveis{% endblock %}
 
 {% block content %}
+<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="/../static/js/listarImovel.js"></script>
+<h1 style="text-align: center;">Imóveis Cadastrados</h1>
+<div class="col-12 filter-div">
+    <div class="d-flex justify-content-center">
+        <div>
+            <select class="form-control" name="filter-status-imovel" id="filter-status-imovel">
+                <option>Status</option>
+                <option value="Ativo">Ativo</option>
+                <option value="Inativo">Inativo</option>
+            </select>
+        </div>
+        <div>
+            <select class="form-control" name="filter-tipo-imovel" id="filter-tipo-imovel">
+                <option>Tipo de Imóvel</option>
+                <option value="Casa">Casa</option>
+                <option value="Apartamento">Apartamento</option>
+                <option value="Kitnet">Kitnet</option>
+            </select>
+        </div>
+        <div>
+            <select class="form-control" name="filter-quartos-imovel" id="filter-quartos-imovel">
+                <option>Qtd. Quartos</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4+</option>
+            </select>
+        </div>
+        <div>
+            <select class="form-control" name="filter-andares-imovel" id="filter-andares-imovel">
+                <option>Qtd. Andares</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3+</option>
+            </select>
+        </div>
+    </div>
+    </form>
+</div>
 <div class="offset-1 col-10 list-div">
-    <h1>Imóveis Cadastrados</h1>
     <a id="add-link" href="cadastrarImovel/">
         <div class="col-2 add-div">
             <i class="fas fa-plus"></i> Cadastrar Imóvel
@@ -28,7 +67,7 @@
         <thead>
             <tr>
                 <th class="titulo" scope="col">Imagens</th>
-                <th class="titulo" scope="col">Endereço</th>
+                <th class="titulo" scope="col">Informações</th>
                 <th class="titulo" scope="col">Ações</th>
             </tr>
         </thead>
@@ -50,7 +89,18 @@
                         </div>
                     </div>
                 </th>
-                <td><span class="endereco" ><a href="imovel/{{imovel.id}}">{{ imovel.endereco }}</a></span></td>
+                <td><span class="endereco"><a href="imovel/{{imovel.id}}">{{ imovel.endereco }}</a><br><br></span>
+                    <span class="imovel.status"><label>Status:</label> {{ imovel.status }}
+                        {% if imovel.status == "Ativo" %}
+                        <i class="fas fa-check-circle"></i>
+                        {% endif %}
+                        {% if imovel.status == "Inativo" %}
+                        <i class="fas fa-times-circle"></i>
+                        {% endif %}
+                    </span><br><br>
+                    <span class="listar-descricao">{{ imovel.descricao }}</span><br><br>
+                    <span class="listar-descricao"><strong>Preço:</strong> <strong style="font-size: 20pt">R$
+                            {{ imovel.preco }}</stong></span></td>
                 <td><a href="deletarImovel/{{imovel.id}}" class="delete-btn"><span><i
                                 class="fas fa-trash"></i></span></a>
                     <a href="editarImovel/{{imovel.id}}"><span><i class="fas fa-edit"></i></span></td>

@@ -9,10 +9,30 @@ from Cliente.models import Cliente
 def imovelList(request):
 
     search = request.GET.get('search')
+    filterStatus = request.GET.get('filterStatus')
+    filterAndares = request.GET.get('filterAndares')
+    filterTipo = request.GET.get('filterTipo')
+    filterQuartos = request.GET.get('filterQuartos')
 
     if search:
         
         imoveis = imovel.objects.filter(endereco__icontains=search)
+    
+    elif filterStatus:
+        
+        imoveis = imovel.objects.filter(status=filterStatus)
+    
+    elif filterTipo:
+        
+        imoveis = imovel.objects.filter(tipoImovel=filterTipo)
+    
+    elif filterAndares:
+        
+        imoveis = imovel.objects.filter(andares=filterAndares)
+    
+    elif filterQuartos:
+        
+        imoveis = imovel.objects.filter(quartos=filterQuartos)    
 
     else:
 

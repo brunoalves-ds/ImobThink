@@ -61,6 +61,53 @@ img {
     letter-spacing: 1px;
 }
 
+.nav-link:hover{
+    background-color: #FFF;
+    border-radius: 10px;
+}
+
+/* Botões de Filtro */
+
+#filter-status-imovel {
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 0px;
+    width: 100px;
+    color: #FFF;
+    margin-left: 10px;
+    background-color: #42A5F5;
+}
+
+#filter-tipo-imovel {
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 0px;
+    width: 100px;
+    color: #FFF;
+    margin-left: 10px;
+    background-color: #42A5F5;
+}
+
+#filter-andares-imovel {
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 0px;
+    color: #FFF;
+    width: 100px;
+    margin-left: 10px;
+    background-color: #42A5F5;
+}
+
+#filter-quartos-imovel {
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 0px;
+    width: 100px;
+    color: #FFF;
+    margin-left: 10px;
+    background-color: #42A5F5;
+}
+
 /* Botão de Cadastrar */
 
 #add-link{
@@ -118,6 +165,10 @@ img {
     margin-left: 20px;
 }
 
+.listar-descricao{
+    text-align: left;
+}       
+
 .imovel-descricao {
     padding: 20px;
     border-radius: 5px;
@@ -170,7 +221,7 @@ img {
 .list-div {
     padding: 20px;
     border-radius: 5px;
-    margin-top: 80px;
+    margin-top: 10px;
     margin-bottom: 80px;
     background-color: #e8e8e8;
 }
